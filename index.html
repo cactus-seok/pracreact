@@ -60,23 +60,20 @@
 
       // 4. 복잡한 리액트 엘리먼트 모임
       // <h1>안녕하세요</h1>
-      // <div><div><h1>주제</h1><ul><li>React</li></ul></div></div>
+
+      // 우리가 작성한 어떤 코드를 => 순수하게 실행할 수 있는 자바스크립트로 변환과정 필요
+      // babel 필요
+
       ReactDOM.render(
-        React.createElement(
-          "div",
-          null,
-          React.createElement(
-            "div",
-            null,
-            React.createElement("h1", null, "주제"),
-            React.createElement(
-              "ul",
-              null,
-              React.createElement("li", null, "React"),
-              React.createElement("li", null, "Vue")
-            )
-          )
-        ),
+        <div a="a">
+          <div>
+            <h1>주제</h1>
+            <ul>
+              <li>React</li>
+              <li>Vue</li>
+            </ul>
+          </div>
+        </div>,
         document.querySelector("#root")
       );
     </script>
